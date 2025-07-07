@@ -240,106 +240,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Avant/Après Section */
-.avant-apres {
-  padding: 5rem 10%;
-  text-align: center;
-  background-color: #f8f9fa;
-}
-
-.avant-apres h2 {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #0077b6;
-}
-
-.comparison-container {
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.image-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image-after {
-  z-index: 1;
-}
-
-.image-before {
-  z-index: 2;
-}
-
-.reveal-circle {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(5px);
-  border: 3px solid #0077b6;
-  z-index: 3;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease;
-  box-shadow: 0 0 20px rgba(0, 119, 182, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.reveal-circle::after {
-  content: '👈 Déplacez-moi';
-  position: absolute;
-  color: #0077b6;
-  font-weight: bold;
-  white-space: nowrap;
-  left: 100%;
-  margin-left: 15px;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.control-btn {
-  padding: 12px 25px;
-  background-color: #0077b6;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.control-btn:hover {
-  background-color: #005f92;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 /* Footer */
 footer {
   background-color: #333;
@@ -458,19 +358,6 @@ html {
   .results-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  .image-wrapper {
-    height: 400px;
-  }
-  
-  .reveal-circle::after {
-    content: '👆 Déplacez-moi';
-    left: 50%;
-    top: 100%;
-    margin-left: 0;
-    margin-top: 15px;
-    transform: translateX(-50%);
-  }
 }
 
 @media (max-width: 480px) {
@@ -484,19 +371,5 @@ html {
   
   .hero h1 {
     font-size: 2.5rem;
-  }
-  
-  .image-wrapper {
-    height: 300px;
-  }
-  
-  .controls {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .control-btn {
-    width: 100%;
-    justify-content: center;
   }
 }
